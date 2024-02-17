@@ -1,0 +1,97 @@
+body {
+  
+    background: linear-gradient(90deg,
+     rgb(94, 76, 14), rgb(183, 163, 7)); 
+
+ }
+   
+ h1 {
+    color: antiquewhite;
+    text-align: center;
+ }
+
+.card {
+    border: 2px solid #ddd;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+    padding-top: 10px;
+  }
+  
+
+  .card-img-top {
+    height: 200px;
+    object-fit: cover;
+  }
+  
+
+  .card-title {
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #b6920e;
+  }
+  
+
+  .card-body {
+    padding: 10px;
+  }
+  
+
+  @media (min-width: 1200px) {
+    .col-md-4 {
+      width: 25%;
+      float: left;
+    }
+  }
+
+  .card {
+    background-color: #484741;
+  }
+
+  .card:hover {
+    transform: rotateY(180deg);
+  }
+
+  .card:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #b6920e; /* Color de fondo alternativo */
+    transform: rotateY(180deg); /* Rota la capa para que coincida con la rotación de la tarjeta */
+    opacity: 0; /* Oculta la capa inicialmente */
+    transition: opacity 0.5s ease-in-out;
+  }
+
+  .card:hover:after {
+    opacity: 1;
+  }
+
+  .card:hover {
+    transform: rotateY(180deg);
+    transition: all 0.5s ease-in-out;
+  }
+  
+  .card:hover:after {
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+  }
+
+  :root {
+    --nombre: "hrmarquezc@unitec.edu";
+  }
+
+  .card:after {
+    content: var(--nombre);
+    
+  }
+
+  .card:after {
+    content: var(--nombre);
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    color: #fff;
+    text-align: center;
+    padding-top: 100px;
+  }
